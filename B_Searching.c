@@ -10,24 +10,30 @@ int main()
         scanf("%d", &arrey[i]);
     }
     scanf("%d", &x);
+    int ans = -1;
     for (int i = 0; i < input; i++)
     {
         if (arrey[i] == x)
         {
-            printf("%d", i);
+            ans = i;
             break;
         }
-        else
-        {
-            if (i + 1 == input)
-            {
-                printf("-1");
-                break;
-            }
         }
-    }
-
-    // printf("%d\n", arrey[input]);
+    printf("%d", ans);
 
     return 0;
 }
+
+// if (arrey[i] == x)
+//         {
+//             printf("%d", i);
+//             break;
+//         }
+//         else
+//         {
+//             if (i + 1 == input)
+//             {
+//                 printf("-1");
+//                 break;
+//             }
+//         }
