@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int input;
+    int input, x;
     scanf("%d", &input);
     int arrey[input];
 
@@ -10,19 +10,9 @@ int main()
         scanf("%d", &arrey[i]);
     }
 
-    for (int i = 0; i < input; i++)
+    for (int i = input - 1; i >= 0; i--)
     {
-
-        if (arrey[i] < 0)
-        {
-            arrey[i] = 2;
-        }
-        else if (arrey[i] > 0)
-        {
-            arrey[i] = 1;
-        }
         printf("%d ", arrey[i]);
     }
-
     return 0;
 }

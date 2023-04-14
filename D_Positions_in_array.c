@@ -12,17 +12,10 @@ int main()
 
     for (int i = 0; i < input; i++)
     {
-
-        if (arrey[i] < 0)
+        if (arrey[i] <= 10)
         {
-            arrey[i] = 2;
+            printf("A[%d] = %d\n", i, arrey[i]);
         }
-        else if (arrey[i] > 0)
-        {
-            arrey[i] = 1;
-        }
-        printf("%d ", arrey[i]);
     }
-
     return 0;
 }

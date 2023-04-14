@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 int main()
 {
     int input;
@@ -10,19 +11,16 @@ int main()
         scanf("%d", &arrey[i]);
     }
 
+    int ans = INT_MAX;
+    int position = 0;
     for (int i = 0; i < input; i++)
     {
-
-        if (arrey[i] < 0)
+        if (arrey[i] < ans)
         {
-            arrey[i] = 2;
+            ans = arrey[i];
+            position = i + 1;
         }
-        else if (arrey[i] > 0)
-        {
-            arrey[i] = 1;
-        }
-        printf("%d ", arrey[i]);
     }
-
+    printf("%d %d", ans, position);
     return 0;
 }
